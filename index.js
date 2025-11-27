@@ -179,8 +179,8 @@ async function sendToNumber(mobile, message, autoSend = true) {
 // API ROUTE
 // ------------------------------------------
 
-app.get("/", (req, res) => {
-  res.send("hello from server");
+app.get("/", async (req, res) => {
+  res.status(200).json("Hello from server side");
 });
 app.post("/send-messages", async (req, res) => {
   // Accept either `numbersList` (preferred) or `numbers` (from older frontends)
