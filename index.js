@@ -178,6 +178,10 @@ async function sendToNumber(mobile, message, autoSend = true) {
 // ------------------------------------------
 // API ROUTE
 // ------------------------------------------
+
+app.get("/", (req, res) => {
+  res.send("hello from server");
+});
 app.post("/send-messages", async (req, res) => {
   // Accept either `numbersList` (preferred) or `numbers` (from older frontends)
   let numbersList = req.body.numbersList || req.body.numbers || [];
